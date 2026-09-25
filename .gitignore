@@ -1,0 +1,8 @@
+node_modules
+.next
+out
+# Local environment files, including .env.local
+.env*
+!.env.example
+*.tsbuildinfo
+next-env.d.ts
