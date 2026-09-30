@@ -12,7 +12,7 @@ export function readable(value: string | null | undefined) {
     cunostinta: "Knowledge",
     soft_skill: "Soft skill",
   };
-  return labels[value] ?? value.replaceAll("_", " ").replace(/\b\w/g, (letter) => letter.toUpperCase());
+  return labels[value] ?? value.replaceAll("_", " ").replace(/(^|[^\p{L}\p{N}])\p{L}/gu, (start) => start.toUpperCase());
 }
 
 export function period(record: {
